@@ -9,6 +9,7 @@ public class Boundry {
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
+	public float tilt;
 	public Boundry boundry;
 
 //	// Use this for initialization
@@ -34,5 +35,8 @@ public class PlayerController : MonoBehaviour {
 			Mathf.Clamp(GetComponent<Rigidbody> ().position.x, boundry.xMin, boundry.xMax),
 			0.0f,
 			Mathf.Clamp(GetComponent<Rigidbody>().position.z, boundry.zMin, boundry.zMax));
+
+		// Setup rotation
+		GetComponent<Rigidbody> ().rotation = Quaternion.Euler (0.0f, 0.0f, GetComponent<Rigidbody> ().velocity.x * -tilt);
 	}
 }
