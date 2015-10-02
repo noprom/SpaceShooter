@@ -3,8 +3,8 @@ using System.Collections;
 
 public class DestoryByTime : MonoBehaviour {
 
-	// Use this for initialization
+	public float lifeTime;
 	void Start () {
-		Destroy (gameObject);
+		Destroy (gameObject, lifeTime);
 	}
 }
