@@ -26,6 +26,8 @@ public class DestoryByContact : MonoBehaviour {
 		Instantiate (explosion, transform.position, transform.rotation);
 		if (other.tag == "Player") {
 			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
+			// Game over
+			gameController.GameOver();
 		}
 
 		gameController.AddScore (scoreValue);
