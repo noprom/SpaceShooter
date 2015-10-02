@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour {
 	public GameObject shot;
 	public Transform shotSpawn;
 	public float fireRate;
-
 	private float nextFire;
 		
 	// Update is called once per frame
